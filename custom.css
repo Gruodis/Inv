@@ -1,0 +1,425 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Fira+Sans:ital,wght@1,600&family=Poppins&display=swap');
+/*		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+
+*,
+body,
+html {
+    /*			font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h1:first-of-type {
+    padding-top: 20vh;
+}
+
+.container {
+    max-width: 100%
+}
+
+.huge {
+    font-size: 4.2rem;
+}
+
+
+.border-custom {
+    border: solid 2px #333;
+    margin: 2em auto;
+    max-width: 992px;
+    padding: 0 1em;
+    border-top-right-radius: 10vh;
+
+    /*			background-image: url("https://draugiskigyvunams.lt/wp-content/uploads/2017/04/downtownforesthotel.jpg");*/
+}
+
+.center-custom {
+    max-width: 42em;
+    position: relative;
+}
+
+.text-content-agne {
+    position: absolute;
+    color: #fff;
+    top: 200px;
+    width: 20vw;
+    padding: .6em;
+    border-radius: 2vh 0 2vh 0;
+    background-color: #EE4266;
+    opacity: 0;
+    left: 75%;
+    transform: translateX(-50%);
+    z-index: 99999999;
+}
+
+.text-content-aurelijus {
+    position: absolute;
+    color: #fff;
+    top: 150px;
+    width: 20vw;
+    padding: .6em;
+    border-radius: 0 2vh 0 2vh;
+    background-color: #2a9fba;
+    opacity: 0;
+    left: 25%;
+    transform: translateX(-50%);
+    z-index: 99999999;
+}
+
+/*
+.text-content-aurelijus::after {
+    content: "\F5E3";
+    color: #2a9fba;
+    position: absolute;
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    right: -17px;
+    bottom: 3px;
+    transform: rotate(-30deg);
+    
+}
+*/
+
+.text-agne-smagu {
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 4s;
+
+}
+
+.text-agne-lauksime {
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 8s;
+    /*			animation-fill-mode: forwards;*/
+
+}
+
+.text-agne-iki {
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+    /* Standard syntax */
+    animation-name: talkEnd;
+    animation-duration: 6s;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+
+}
+
+.text-aurelijus-labas {
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 2s;
+
+}
+
+.text-aurelijus-kvieciame {
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 6s;
+    /*			animation-fill-mode: forwards;*/
+
+}
+
+.text-aurelijus-detales {
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+    /* Standard syntax */
+    animation-name: talkEnd;
+    animation-duration: 8s;
+    animation-delay: 10s;
+    animation-fill-mode: forwards;
+
+}
+
+@media (min-width: 968px) {
+    .content-center {
+        max-width: 42vw;
+
+    }
+}
+
+@media (max-width: 576px) {
+    .text-content-agne {
+        width: 30vw;
+        font-size: 1rem;
+        padding: 0.3em;
+        border-radius: 2vh 0 2vh 0;
+        left: 85%;
+        transform: translateX(-50%);
+        bottom: 50vh;
+        top: auto;
+
+    }
+
+    .text-content-aurelijus {
+        width: 30vw;
+        font-size: 1rem;
+        padding: 0.3em;
+        left: 15%;
+        bottom: 55vh;
+        top: auto;
+
+    }
+}
+
+.content-center {
+    margin: 2em auto;
+    padding-left: 1em;
+    padding-right: 1em;
+    z-index: 99999;
+}
+
+.respinsive-img {
+    max-height: 80vh;
+    opacity: 1;
+    animation: rectFade 2s forwards;
+}
+
+.forestas {
+    border-radius: 50%;
+    max-width: 80%;
+}
+
+.respinsive-iframe {
+    height: 80vh;
+    max-height: 80vh;
+    padding-bottom: 2em;
+}
+
+.btn-custom {
+    background-color: #EE4266;
+    border-color: #EE4266;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: #EA1F4B;
+    border-color: #F37C96;
+    color: #fff;
+}
+
+.light-bg {
+    background-color: #E8EDDF;
+
+}
+
+.grad-bg {
+    background-image: linear-gradient(45deg, #fddb92 0%, #d1fdff 100%);
+
+
+}
+
+.form-check-input:checked {
+    background-color: #EA1F4B;
+    border-color: #F37C96;
+}
+
+.globe {
+    position: relative;
+    overflow: hidden;
+}
+
+.globe::before {
+    content: url(https://slibinukas.lt/img/cloud.svg);
+    width: 30vw;
+    /* height: 100vh; */
+    position: absolute;
+    bottom: 0vh;
+    left: -100%;
+    z-index: 2;
+    animation: clouds 30s infinite linear;
+    animation-delay: 4s;
+}
+
+
+.globe::after {
+    content: url(https://slibinukas.lt/img/earth.svg);
+    width: 200vw;
+    /* height: 100vh; */
+    position: absolute;
+    top: 20vw;
+    left: -50vw;
+    z-index: -1;
+    animation: rotation 100s infinite linear;
+    animation-delay: 2s;
+}
+
+.cloud-1 {
+    background-image: url(https://slibinukas.lt/img/cloud.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30vw;
+    height: 30vh;
+    position: absolute;
+    bottom: 40vh;
+    left: -50%;
+    z-index: 0;
+    animation: clouds 60s infinite linear;
+    animation-delay: 12s;
+}
+
+.cloud-2 {
+    background-image: url(https://slibinukas.lt/img/cloud.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60vw;
+    height: 60vh;
+    position: absolute;
+    bottom: 40vh;
+    left: -80%;
+    z-index: 0;
+    transform: rotateY(180deg);
+    animation: clouds 45s infinite linear;
+    animation-delay: 2s;
+}
+
+.border-bottom {
+    position: absolute;
+    width: 200vw;
+    height: 100%;
+    background-color: #fff;
+    left: -50%;
+    bottom: -90%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.center-image {
+    margin: 10vh 0;
+}
+
+@media (max-width: 1200px) {
+    .globe::after {
+        top: 50vw;
+        left: -50vw;
+    }
+
+    .globe::before {
+        bottom: 3vh;
+        left: -100%;
+        width: 50vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .globe::after {
+        top: 100vw;
+        left: -50vw;
+    }
+}
+
+@keyframes clouds {
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rectFade {
+    0% {
+        transform: scale(0.1);
+    }
+
+    /*
+40% {
+transform: scale(1) rotateY(0deg);
+}
+50% {
+transform: scale(1) rotateY(90deg); 
+}
+750% {
+transform: scale(1) rotateY(-90deg); 
+
+}*/
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes talk {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+
+    }
+
+    95% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes talkEnd {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

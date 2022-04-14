@@ -1,0 +1,795 @@
+/*
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+*/
+/* Safari 10.1+ (alternate method) */
+
+/* Safari 9+, < 13.1 */
+
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+
+    .flexFix {
+
+        display: block !important;
+
+    }
+}
+
+@font-face {
+    font-family: "Oswald";
+    src: url("/fonts/Oswald-Light.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Amatic SC";
+    src: url("/fonts/AmaticSC-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+body,
+html {
+    /*			font-family: 'Open Sans', sans-serif;*/
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    letter-spacing: .1rem;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Amatic SC', cursive;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h1:first-of-type {
+    padding-top: 10vh;
+}
+
+.container {
+    max-width: 100%;
+    /*	overflow-x: hidden;*/
+}
+
+.thanku {
+    height: 100vh;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.invalid-tooltip {
+    top: 20vh;
+    position: initial;
+    width: 80vw;
+    display: block;
+    margin: auto auto;
+    background-color: rgba(220, 53, 69, 1);
+    padding: 1em;
+}
+
+.huge {
+    font-size: 4.2rem;
+}
+
+
+.border-custom {
+    border: solid 2px #333;
+    background-color: #fff;
+    margin: 2em auto;
+    max-width: 992px;
+    padding: 0 1em;
+    border-top-right-radius: 10vh;
+
+    /*			background-image: url("https://draugiskigyvunams.lt/wp-content/uploads/2017/04/downtownforesthotel.jpg");*/
+}
+
+.center-custom {
+    max-width: 42em;
+    position: relative;
+}
+
+.text-content-agne {
+    position: absolute;
+    color: #fff;
+    top: 200px;
+    /*    width: 20vw;*/
+    padding: 1.2em;
+    border-radius: 2vh 0 2vh 0;
+    background-color: #EE4266;
+    opacity: 0;
+    left: 75%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+.text-content-aurelijus {
+    position: absolute;
+    color: #fff;
+    /*    width: 20vw;*/
+    padding: 1.2em;
+    border-radius: 0 2vh 0 2vh;
+    background-color: #2a9fba;
+    opacity: 0;
+    top: 180px;
+    left: 25%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+
+/*
+.text-content-aurelijus::after {
+    content: "\F5E3";
+    color: #2a9fba;
+    position: absolute;
+    display: inline-block;
+    font-family: bootstrap-icons !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    vertical-align: -0.125em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    right: -17px;
+    bottom: 3px;
+    transform: rotate(-30deg);
+    
+}
+*/
+
+.text-agne-smagu {
+    /*
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+*/
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+
+}
+
+.text-agne-lauksime {
+    /*
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+*/
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 9s;
+    /*			animation-fill-mode: forwards;*/
+    animation-timing-function: linear;
+
+}
+
+.text-agne-iki {
+    /*
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+*/
+    /* Standard syntax */
+    animation-name: talkEnd;
+    animation-duration: 6s;
+    animation-delay: 13s;
+    animation-fill-mode: forwards;
+
+}
+
+.text-aurelijus-labas {
+    /*
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+
+*/
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-timing-function: linear;
+
+}
+
+.text-aurelijus-kvieciame {
+    /*
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+*/
+    /* Standard syntax */
+    animation-name: talk;
+    animation-duration: 4s;
+    animation-delay: 8s;
+    /*			animation-fill-mode: forwards;*/
+    animation-timing-function: linear;
+
+}
+
+.text-aurelijus-detales {
+    /*
+    -webkit-animation-name: talk;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-delay: 2s;
+*/
+    /* Standard syntax */
+    animation-name: talkEnd;
+    animation-duration: 8s;
+    animation-delay: 12s;
+    animation-fill-mode: forwards;
+
+}
+
+.respo {
+    max-width: 30vw;
+    height: 30vw;
+    position: relative;
+    margin: 2em auto;
+}
+
+.respo::after {
+    content: '';
+    background-image: url('https://slibinukas.lt/img/sneakers.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    animation: kedai 2s infinite cubic-bezier(.86, 0, .07, 1);
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+@media (min-width: 968px) {
+    .content-center {
+        max-width: 42vw;
+
+    }
+}
+
+@media (max-width: 967px) {
+    .globe::after {
+        top: 60vw;
+
+    }
+
+    .globe::before {
+        top: -20vw;
+        bottom: auto;
+    }
+
+    .text-content-agne {
+        width: 30vw;
+        font-size: 1rem;
+        padding: 0.8em;
+        border-radius: 2vh 0 2vh 0;
+        left: 85%;
+        transform: translateX(-50%);
+        bottom: 100vw;
+        top: auto;
+
+    }
+
+    .text-content-aurelijus {
+        width: 30vw;
+        font-size: 1rem;
+        padding: 0.8em;
+        left: 15%;
+        bottom: 110vw;
+        top: auto;
+
+    }
+}
+
+.content-center {
+    margin: 2em auto;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.respinsive-img {
+    max-height: 80vh;
+    opacity: 0;
+    animation: couple2 3s 1s forwards cubic-bezier(.86, 0, .07, 1);
+}
+
+.respinsive-img2 {
+    max-width: 100%;
+    width: 100vw;
+    position: absolute;
+    left: -150vw;
+    /*    opacity: 0;*/
+    bottom: 0;
+    animation: couple2 2s forwards ease-out;
+    animation-delay: 1s;
+}
+
+.forestas {
+    border-radius: 50%;
+    max-width: 80%;
+}
+
+.respinsive-iframe {
+    height: 60vh;
+    width: 100%;
+    padding: 2em;
+}
+
+.btn-custom {
+    background-color: #EE4266;
+    border-color: #EE4266;
+    color: #fff;
+}
+
+.btn-custom:hover {
+    background-color: #EA1F4B;
+    border-color: #F37C96;
+    color: #fff;
+}
+
+.light-bg {
+    background-color: #E8EDDF;
+
+}
+
+.sky-bg {
+    background: rgb(28, 132, 161);
+    background: linear-gradient(180deg, rgba(28, 132, 161, 1) 0%, rgba(232, 237, 223, 1) 98%, rgba(232, 237, 223, 1) 100%);
+}
+
+.grad-bg {
+    background-image: linear-gradient(45deg, #fddb92 0%, #d1fdff 100%);
+
+
+}
+
+.form-check-input:checked {
+    background-color: #EA1F4B;
+    border-color: #F37C96;
+}
+
+.globe {
+    position: relative;
+    /*    overflow: hidden;*/
+    /*		overflow: hidden;*/
+}
+
+.globe2 {
+    position: relative;
+    overflow: hidden;
+}
+
+.globe::before {
+    content: "";
+    background-image: url('https://slibinukas.lt/img/big7.webp');
+    /*	background-size: 200vh 200vw;*/
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    width: 200vw;
+    height: 200vw;
+    position: absolute;
+    bottom: -100vw;
+    left: -50vw;
+    z-index: -3;
+    /*	transform: translateX(-50%);*/
+    animation: rotation 104s infinite ease-in-out;
+    animation-delay: 6s;
+}
+
+
+.globe::after {
+    content: url(https://slibinukas.lt/img/earth.svg);
+    width: 200vw;
+    /* height: 100vh; */
+    position: absolute;
+    top: 20vw;
+    left: -50vw;
+    z-index: -1;
+    animation: rotation 80s infinite ease-in-out;
+    animation-delay: 4s;
+}
+
+/*
+.cloud-1 {
+    background-image: url(https://slibinukas.lt/img/plane.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 250vw;
+    height: 250vh;
+    position: absolute;
+    bottom: -100vw;
+    left: -250vw;
+    z-index: -2;
+    animation: plane 20s forwards ease-in-out;
+    animation-delay: 9s;
+}
+*/
+
+.cloud-2 {
+    background-image: url(https://slibinukas.lt/img/cloud.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 60vw;
+    height: 60vh;
+    position: absolute;
+    bottom: 40vh;
+    left: -120vw;
+    z-index: 0;
+    transform: rotate(180deg);
+    animation: clouds 25s infinite linear;
+    animation-delay: 2s;
+}
+
+.bottom-shadow {
+    position: absolute;
+    width: 100vw;
+    height: 10vh;
+    bottom: 0;
+    left: 0;
+}
+
+.border-bottom {
+    position: absolute;
+    width: 200vw;
+    height: 100%;
+    background-color: #fff;
+    left: -50%;
+    bottom: -90%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+.center-image {
+    margin: 5vh 0;
+}
+
+@media (max-width: 768px) and (orientation: portrait) {
+    .globe::after {
+        top: 50vw;
+        left: -50vw;
+    }
+
+    .globe::before {
+        content: "";
+        background-image: url('https://slibinukas.lt/img/big7.webp');
+        width: 200vh;
+        height: 200vh;
+        left: -70vh;
+        top: -10vh;
+        /*		bottom: auto;*/
+        /*		transform: translate(-50%);*/
+        /*		bottom: -25vh;*/
+    }
+
+    .respinsive-iframe {
+        padding: 1em;
+        height: 70vh;
+    }
+}
+
+
+@media (min-width: 800px) and (orientation: landscape) {
+    .globe::before {
+        content: "";
+        background-image: url('https://slibinukas.lt/img/big7.webp');
+        width: 200vw;
+        height: 200vw;
+        left: -50vw;
+        top: -50vh;
+        /*		bottom: -200vh;*/
+        /*		transform: translate(-50%);*/
+    }
+}
+
+/*
+@media (min-width: 992) and (orientation: landscape) {
+    .globe::before {
+		background-image: url('https://slibinukas.lt/img/big.webp');
+		width: 200vw;
+		height: 200vw;
+		left: -56vw;
+		top: -10%;
+		bottom: -200vh;
+		transform: translate(-50%);
+    }
+}
+*/
+
+
+@media (max-width: 768px) {
+    .globe::after {
+        top: 100vw;
+        left: -50vw;
+    }
+}
+
+@keyframes clouds {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes kedai {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(0%, 20%);
+    }
+
+    50% {
+        transform: translate(0%, 0%);
+    }
+
+    75% {
+        transform: translate(0%, 20%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+}
+
+@keyframes rectFade {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+
+    /*
+40% {
+transform: scale(1) rotate(0deg);
+}
+50% {
+transform: scale(1) rotate(90deg); 
+}
+750% {
+transform: scale(1) rotate(-90deg); 
+
+}*/
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes couple {
+    0% {
+        transform: scale(0.1) translateZ();
+        opacity: 0;
+    }
+
+
+    5% {
+        transform: scale(0.2);
+        opacity: 1;
+    }
+
+    /*
+50% {
+transform: scale(1) rotate(90deg); 
+}
+750% {
+transform: scale(1) rotate(-90deg); 
+
+}*/
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes couple2 {
+    0% {
+        transform: scale(0.1) rotate(5deg);
+        opacity: 0;
+    }
+
+
+    5% {
+
+        transform: scale(0.1) rotate(-5deg);
+
+    }
+
+    10% {
+
+        transform: scale(0.15) rotate(5deg);
+        opacity: 1;
+    }
+
+    15% {
+
+        transform: scale(0.2) rotate(-5deg);
+
+    }
+
+    20% {
+
+        transform: scale(0.25) rotate(5deg);
+    }
+
+    25% {
+
+        transform: scale(0.3) rotate(-5deg);
+    }
+
+    30% {
+
+        transform: scale(0.35) rotate(5deg);
+    }
+
+    35% {
+        transform: scale(0.4) rotate(-5deg);
+    }
+
+    40% {
+
+        transform: scale(0.45) rotate(5deg);
+    }
+
+    45% {
+
+        transform: scale(0.50) rotate(-5deg);
+    }
+
+    50% {
+
+        transform: scale(0.55) rotate(5deg);
+    }
+
+    55% {
+
+        transform: scale(0.6) rotate(-5deg);
+    }
+
+    60% {
+
+        transform: scale(0.65) rotate(5deg);
+    }
+
+    65% {
+
+        transform: scale(0.7) rotate(-5deg);
+    }
+
+    70% {
+
+        transform: scale(0.75) rotate(5deg);
+
+    }
+
+    75% {
+
+        transform: scale(0.8) rotate(-5deg);
+
+    }
+
+    80% {
+
+
+        transform: scale(0.85) rotate(5deg);
+    }
+
+    85% {
+
+        transform: scale(0.9) rotate(-5deg);
+    }
+
+    90% {
+
+        transform: scale(0.95) rotate(5deg);
+    }
+
+    95% {
+
+        transform: scale(0.98) rotate(-5deg);
+    }
+
+    100% {
+
+        transform: scale(1) rotate(0);
+        opacity: 1;
+        /*    max-height: 80vh;*/
+
+        /*    transform: translate(-50%);*/
+    }
+}
+
+@keyframes talk {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes talkEnd {
+    0% {
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    95% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes plane {
+    0% {
+        transform: scale(0);
+        left: -100vw;
+        bottom: -100vh;
+    }
+
+    /*
+40% {
+transform: scale(1) rotate(0deg);
+}
+50% {
+transform: scale(1) rotate(90deg); 
+}
+750% {
+transform: scale(1) rotate(-90deg); 
+
+}*/
+    100% {
+        transform: scale(1);
+        left: 10vw;
+        bottom: 100vh;
+    }
+}

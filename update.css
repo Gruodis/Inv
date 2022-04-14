@@ -19,6 +19,10 @@
     font-style: normal;
 }
 
+* {
+    -webkit-overflow-scrolling: touch;
+}
+
 body,
 html {
     /*			font-family: 'Open Sans', sans-serif;*/
@@ -26,10 +30,17 @@ html {
     font-size: 1.2rem;
     letter-spacing: .1rem;
 }
-
 body,
 html {
-    height: 100%;
+	height: 100%;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	}
+
+	.flexFixNow {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
 }
 
 h1,
@@ -45,9 +56,28 @@ h1 {
 h1:first-of-type {
     padding-top: 20vh;
 }
-
 .container {
-    max-width: 100%
+	max-width: 100%;
+	/*	overflow-x: hidden;*/
+	}
+
+	.thanku {
+	    height: 100vh;
+	    min-height: 100%;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+	}
+
+	.invalid-tooltip {
+	    top: 20vh;
+	    position: initial;
+	    width: 80vw;
+	    display: block;
+	    margin: auto auto;
+	    background-color: rgba(220, 53, 69, 1);
+	    padding: 1em;
 }
 
 .huge {
@@ -57,6 +87,7 @@ h1:first-of-type {
 
 .border-custom {
     border: solid 2px #333;
+	background-color: #fff;
     margin: 2em auto;
     max-width: 992px;
     padding: 0 1em;
@@ -81,7 +112,7 @@ h1:first-of-type {
     opacity: 0;
     left: 75%;
     transform: translateX(-50%);
-    z-index: 99999999;
+    z-index: 0;
 }
 
 .text-content-aurelijus {
@@ -95,7 +126,7 @@ h1:first-of-type {
     opacity: 0;
     left: 25%;
     transform: translateX(-50%);
-    z-index: 99999999;
+    z-index: 0;
 }
 
 /*
@@ -121,7 +152,7 @@ h1:first-of-type {
 */
 
 .text-agne-smagu {
-    /*
+/*
     -webkit-animation-name: talk;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 2s;
@@ -130,11 +161,12 @@ h1:first-of-type {
     animation-name: talk;
     animation-duration: 4s;
     animation-delay: 5s;
+	 animation-timing-function: linear;
 
 }
 
 .text-agne-lauksime {
-    /*
+/*
     -webkit-animation-name: talk;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 2s;
@@ -144,11 +176,12 @@ h1:first-of-type {
     animation-duration: 4s;
     animation-delay: 9s;
     /*			animation-fill-mode: forwards;*/
+	 animation-timing-function: linear;
 
 }
 
 .text-agne-iki {
-    /*
+/*
     -webkit-animation-name: talk;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 2s;
@@ -162,7 +195,7 @@ h1:first-of-type {
 }
 
 .text-aurelijus-labas {
-    /*
+/*
     -webkit-animation-name: talk;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 2s;
@@ -171,11 +204,12 @@ h1:first-of-type {
     animation-name: talk;
     animation-duration: 4s;
     animation-delay: 4s;
+	 animation-timing-function: linear;
 
 }
 
 .text-aurelijus-kvieciame {
-    /*
+/*
     -webkit-animation-name: talk;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 2s;
@@ -185,11 +219,12 @@ h1:first-of-type {
     animation-duration: 4s;
     animation-delay: 8s;
     /*			animation-fill-mode: forwards;*/
+	 animation-timing-function: linear;
 
 }
 
 .text-aurelijus-detales {
-    /*
+/*
     -webkit-animation-name: talk;
     -webkit-animation-duration: 4s;
     -webkit-animation-delay: 2s;
@@ -200,6 +235,24 @@ h1:first-of-type {
     animation-delay: 12s;
     animation-fill-mode: forwards;
 
+}
+.respo {
+    max-width: 30vw;
+    height: 30vw;
+    position: relative;
+    margin: 2em auto;
+}
+
+.respo::after {
+    content: '';
+    background-image: url('https://slibinukas.lt/img/sneakers.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    animation: kedai 2s infinite cubic-bezier(.86, 0, .07, 1);
+    position: absolute;
+    height: 100%;
+    left: 0;
 }
 
 @media (min-width: 968px) {
@@ -243,19 +296,17 @@ h1:first-of-type {
 .respinsive-img {
     max-height: 80vh;
     opacity: 0;
-    animation: couple 1s forwards ease-out;
-    animation-delay: 3s;
+    animation: couple2 3s 1s forwards cubic-bezier(.86, 0, .07, 1);
 }
-
 .respinsive-img2 {
     max-width: 100%;
-    width: 100vw;
-    position: absolute;
-    left: -150vw;
-    /*    opacity: 0;*/
-    bottom: 0;
+	width:100vw;
+	position: absolute;
+	left: -150vw;
+	/*    opacity: 0;*/
+	bottom: 0;
     animation: couple2 2s forwards ease-out;
-    animation-delay: 1s;
+	animation-delay: 1s;
 }
 
 .forestas {
@@ -285,6 +336,10 @@ h1:first-of-type {
     background-color: #E8EDDF;
 
 }
+.sky-bg {
+    background: rgb(28, 132, 161);
+    background: linear-gradient(180deg, rgba(28, 132, 161, 1) 0%, rgba(232, 237, 223, 1) 98%, rgba(232, 237, 223, 1) 100%);
+}
 
 .grad-bg {
     background-image: linear-gradient(45deg, #fddb92 0%, #d1fdff 100%);
@@ -299,23 +354,27 @@ h1:first-of-type {
 
 .globe {
     position: relative;
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
 .globe::before {
-    content: "";
-    background-image: url('https://slibinukas.lt/img/sky4.svg');
-    /*	background-size: 200vh 200vw;*/
-    background-repeat: no-repeat;
-    background-size: cover;
+    content: url('https://slibinukas.lt/img/big7.webp');
+    /*
+	background-image: ;
+	background-size: 200vh 200vw;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+*/
+
     width: 200vw;
     height: 200vw;
     position: absolute;
     bottom: -100vw;
     left: -50vw;
     z-index: -3;
-    /*	transform: translateX(-50%);*/
-    animation: rotation 94s infinite ease-in-out;
+/*	transform: translateX(-50%);*/
+    animation: rotation 104s infinite ease-in-out;
     animation-delay: 6s;
 }
 
@@ -328,10 +387,11 @@ h1:first-of-type {
     top: 20vw;
     left: -50vw;
     z-index: -1;
-    animation: rotation 100s infinite ease-in-out;
+    animation: rotation 80s infinite ease-in-out;
     animation-delay: 4s;
 }
 
+/*
 .cloud-1 {
     background-image: url(https://slibinukas.lt/img/plane.svg);
     background-position: center;
@@ -345,6 +405,7 @@ h1:first-of-type {
     animation: plane 20s forwards ease-in-out;
     animation-delay: 9s;
 }
+*/
 
 .cloud-2 {
     background-image: url(https://slibinukas.lt/img/cloud.svg);
@@ -360,15 +421,13 @@ h1:first-of-type {
     animation: clouds 25s infinite linear;
     animation-delay: 2s;
 }
-
 .bottom-shadow {
-    position: absolute;
+	position: absolute;
     width: 100vw;
     height: 10vh;
-    bottom: 0;
-    left: 0;
+	bottom: 0;
+	left: 0;
 }
-
 .border-bottom {
     position: absolute;
     width: 200vw;
@@ -385,21 +444,53 @@ h1:first-of-type {
     margin: 10vh 0;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 768px) and (orientation: portrait) {
     .globe::after {
         top: 50vw;
         left: -50vw;
     }
 
     .globe::before {
-        width: 200%;
-        height: 200%;
-        left: -50%;
-        top: -10%;
-        bottom: auto;
-        transform: translate(-50%);
+		content:url('https://slibinukas.lt/img/big7.webp');
+		/*		background-image: ;*/
+		width: 200vh;
+		height: 200vh;
+		left: -70vh;
+		top: -10vh;
+		/*		bottom: auto;*/
+		/*		transform: translate(-50%);*/
+		/*		bottom: -25vh;*/
+		}
+		}
+
+
+		@media (min-width: 800px) and (orientation: landscape) {
+		    .globe::before {
+		        content: url('https://slibinukas.lt/img/big7.webp');
+		        /*		background-image: ;*/
+		        width: 200vw;
+		        height: 200vw;
+		        left: -50vw;
+		        top: -50vh;
+		        /*		bottom: -200vh;*/
+		        /*		transform: translate(-50%);*/
+		    }
+		}
+
+		/*
+@media (min-width: 992) and (orientation: landscape) {
+    .globe::before {
+		background-image: url('https://slibinukas.lt/img/big.webp');
+		width: 200vw;
+		height: 200vw;
+		left: -56vw;
+		top: -10%;
+		bottom: -200vh;
+		transform: translate(-50%);
     }
 }
+*/
+
 
 @media (max-width: 768px) {
     .globe::after {
@@ -429,10 +520,32 @@ h1:first-of-type {
     }
 }
 
+@keyframes kedai {
+    0% {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(0%, 20%);
+    }
+
+    50% {
+        transform: translate(0%, 0%);
+    }
+
+    75% {
+        transform: translate(0%, 20%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0%, 0%) rotate(360deg);
+    }
+}
+
 @keyframes rectFade {
     0% {
         transform: scale(0.1);
-        opacity: 0;
+		opacity: 0;
     }
 
     /*
@@ -448,23 +561,20 @@ transform: scale(1) rotate(-90deg);
 }*/
     100% {
         transform: scale(1);
-        opacity: 1;
+		opacity: 1;
     }
 }
-
 @keyframes couple {
     0% {
-        transform: scale(0.1);
+        transform: scale(0.1) translateZ();
         opacity: 0;
     }
-
 
     5% {
         transform: scale(0.2);
         opacity: 1;
     }
-
-    /*
+	/*
 50% {
 transform: scale(1) rotate(90deg); 
 }
@@ -474,115 +584,84 @@ transform: scale(1) rotate(-90deg);
 }*/
     100% {
         transform: scale(1);
-        opacity: 1;
+		opacity: 1;
     }
 }
-
 @keyframes couple2 {
     0% {
-        left: -150%;
-        transform: rotate(5deg);
+		transform:scale(0.1) rotate(5deg);
+		opacity: 0;
     }
-
 
     5% {
-        left: -50%;
-        transform: rotate(-5deg);
-    }
+transform:scale(0.1) rotate(-5deg);
 
-    10% {
-        left: -45%;
-        transform: rotate(5deg);
-    }
+}
+	10% {
+transform:scale(0.15) rotate(5deg);
+opacity: 1;
+}
+	15% {
+transform:scale(0.2) rotate(-5deg);
 
-    15% {
-        left: -40%;
-        transform: rotate(-5deg);
-    }
+}
+	20% {
+transform:scale(0.25) rotate(5deg);
+}
+	25% {
+transform:scale(0.3) rotate(-5deg);
+}
+	30% {
+transform:scale(0.35) rotate(5deg);
+}
+	35% {
+		transform:scale(0.4) rotate(-5deg);
+		}
+	40% {
+transform:scale(0.45) rotate(5deg);
+}
+	45% {
+transform:scale(0.50) rotate(-5deg);
+}
+	50% {
+transform:scale(0.55) rotate(5deg);
+}
+	55% {
+transform:scale(0.6) rotate(-5deg);
+}
+	60% {
+transform:scale(0.65) rotate(5deg);
+}
+	65% {
+transform:scale(0.7) rotate(-5deg);
+}
+	70% {
+transform:scale(0.75) rotate(5deg);
 
-    20% {
-        left: -35%;
-        transform: rotate(5deg);
-    }
+	}
+	75% {
+transform:scale(0.8) rotate(-5deg);
 
-    25% {
-        left: -30%;
-        transform: rotate(-5deg);
-    }
+	}
+	80% {
+transform:scale(0.85) rotate(5deg);
+}
+	85% {
+transform:scale(0.9) rotate(-5deg);
+}
+	90% {
+transform:scale(0.95) rotate(5deg);
+}
+	95% {
 
-    30% {
-        left: -25%;
-        transform: rotate(5deg);
-    }
-
-    35% {
-        left: -20%;
-        transform: rotate(-5deg);
-    }
-
-    40% {
-        left: -15%;
-        transform: rotate(5deg);
-    }
-
-    45% {
-        left: -10%;
-        transform: rotate(-5deg);
-    }
-
-    50% {
-        left: -5%;
-        transform: rotate(5deg);
-    }
-
-    55% {
-        left: 0%;
-        transform: rotate(-5deg);
-    }
-
-    60% {
-        left: 5%;
-        transform: rotate(5deg);
-    }
-
-    65% {
-        left: 10%;
-        transform: rotate(-5deg);
-    }
-
-    70% {
-        left: 15%;
-        transform: rotate(5deg);
-
-    }
-
-    75% {
-        left: 20%;
-        transform: rotate(-5deg);
-
-    }
-
-    80% {
-        left: 25%;
-        transform: rotate(5deg);
-    }
-
-    85% {
-        left: 27%;
-        transform: rotate(-5deg);
-    }
-
-    90% {
-        left: 35%;
-        transform: rotate(0deg);
-    }
-
+		transform:scale(0.98) rotate(-5deg);
+		}
     100% {
-        left: 50%;
-        transform: rotate(0deg) translate(-50%);
-        /*    max-height: 80vh;*/
+   		transform:scale(1) rotate(0);
+   		opacity: 1;
+   		/*    max-height: 80vh;*/
 
-        /*    transform: translate(-50%);*/
+/*    transform: translate(-50%);*/
     }
 }
 
@@ -590,12 +669,10 @@ transform: scale(1) rotate(-90deg);
     0% {
         opacity: 0;
     }
-
-    5% {
+	5% {
         opacity: 1;
     }
-
-    95% {
+	95% {
         opacity: 1;
     }
 
@@ -608,12 +685,10 @@ transform: scale(1) rotate(-90deg);
     0% {
         opacity: 0;
     }
-
-    5% {
+	5% {
         opacity: 1;
     }
-
-    95% {
+	95% {
         opacity: 1;
     }
 
@@ -621,12 +696,11 @@ transform: scale(1) rotate(-90deg);
         opacity: 1;
     }
 }
-
 @keyframes plane {
     0% {
         transform: scale(0);
-        left: -100vw;
-        bottom: -100vh;
+		left: -100vw;
+		bottom: -100vh;
     }
 
     /*
@@ -642,7 +716,7 @@ transform: scale(1) rotate(-90deg);
 }*/
     100% {
         transform: scale(1);
-        left: 10vw;
-        bottom: 100vh;
+		left: 10vw;
+		bottom: 100vh;
     }
 }
